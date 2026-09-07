@@ -101,7 +101,7 @@ const EN = {
   "hero.role": "Web Developer · Technical Support",
 
   "about.title":          "About Me",
-  "about.text":           "[Write two or three sentences about yourself: what you study, what interests you in web development, and what you are looking for now.]",
+  "about.text":           "[I am a university student, dedicated to my studies and committed to achieving my goals and dreams. I consider myself a responsible and persevering person, with a desire to keep learning and growing both personally and professionally.]",
   "about.infoTitle":      "Information",
   "about.labelLocation":  "Location",
   "about.valueLocation":  "[City], Colombia",
@@ -130,9 +130,9 @@ const EN = {
   "resume.experience": "Experience",
 
   "edu.1.title": "Professional Technician in Web Programming",
-  "edu.1.text":  "[One or two sentences about what you are learning and what you can do now.]",
-  "edu.2.title": "[Course or certificate]",
-  "edu.2.text":  "[What you learned and how you use it.]",
+  "edu.1.text":  "[I am currently a university student studying Systems Engineering, where I am developing knowledge in programming, web development, databases, and computer systems. I have worked on different academic projects that have helped me improve my technical skills, teamwork, and responsibility.]",
+  "edu.2.title": "[curso de ingles en idefum]",
+  "edu.2.text":  "[I learned vocabulary, pronunciation, listening comprehension, and basic communication in English. It helps me improve my ability to communicate in English and strengthen my academic and professional opportunities.]",
 
   "exp.1.title": "[Role or type of project]",
   "exp.1.text":  "[What you did, which tools you used, and what the result was.]",
