@@ -13,21 +13,18 @@ A public web page with six sections:
 
 | Section | What goes there |
 |---|---|
-| Home | Emili Rico,student, ahorita |
-| About | I am a university student, dedicated to my studies and committed to achieving my goals and dreams. I consider myself a responsible and persevering person, with a desire to keep learning and growing both personally and professionally.
- |
+| Home | Emili Rico,student, https://github.com/Juliethrico40/Proyecto-Ingl-s-II-2026, emiliricorico@icloud.com |
+| About | I am a university student, dedicated to my studies and committed to achieving my goals and dreams. I consider myself a responsible and persevering person, with a desire to keep learning and growing both personally and professionally.|
 | Skills | Technical Skills 
 Visual Studio Code, HTML & CSS, Basic Computer Systems, MySQL / SQL
 Professional Skills 
 Responsibility, Time Management, Teamwork, Adaptability |
-| Resume | I am currently a university student studying Systems Engineering, where I am developing knowledge in programming, web development, databases, and computer systems. I have worked on different academic projects that have helped me improve my technical skills, teamwork, and responsibility.
- |
+| Resume | I am currently a university student studying Systems Engineering, where I am developing knowledge in programming, web development, databases, and computer systems. I have worked on different academic projects that have helped me improve my technical skills, teamwork, and responsibility. |
 | Projects | Computer Lab Management Web Platform — A web platform designed to help teachers check and manage the availability of computer labs at a university.
 Quinceañera Registration Website — A website created to register and manage guests for a quinceañera celebration using HTML, CSS, and JavaScript.
 Database Management Project — An academic project focused on creating and managing databases using MySQL and SQL.
 Academic Research Project — A research project focused on technology management and the availability of academic spaces. |
 | Contact | If you would like to learn more about my projects, collaborate with me, or establish a professional connection, you can contact me through the following channels:
-
 Email: emiliricorico@icloud.com
 GitHub: Juliethrico40
 Location: Colombia |
