@@ -134,23 +134,23 @@ const EN = {
   "edu.2.title": "[curso de ingles en idefum]",
   "edu.2.text":  "[I learned vocabulary, pronunciation, listening comprehension, and basic communication in English. It helps me improve my ability to communicate in English and strengthen my academic and professional opportunities.]",
 
-  "exp.1.title": "[Role or type of project]",
-  "exp.1.text":  "[What you did, which tools you used, and what the result was.]",
-  "exp.2.title": "[Role or type of project]",
-  "exp.2.text":  "[What you did, which tools you used, and what the result was.]",
+  "exp.1.title": "[Web Development Project]",
+  "exp.1.text":  "[I developed a web platform for managing computer lab availability. I used HTML, CSS, JavaScript, and MySQL to create the interface and manage the information. The result was a functional platform that makes it easier to check and manage available computer labs.]",
+  "exp.2.title": "[Quinceañera Registration Website]",
+  "exp.2.text":  "[I developed a website for registering guests for a quinceañera event. I used HTML, CSS, JavaScript, and MySQL to create the registration form and manage the data. The result was a simple and organized website for collecting and managing guest information]",
 
   "portfolio.title": "Projects",
-  "project.1.title": "[Project name]",
-  "project.1.text":  "[Technologies used]",
-  "project.2.title": "[Project name]",
-  "project.2.text":  "[Technologies used]",
-  "project.3.title": "[Project name]",
-  "project.3.text":  "[Technologies used]",
+  "project.1.title": "[Computer Lab Management Platform]",
+  "project.1.text":  "[HTML, CSS, JavaScript, MySQ]",
+  "project.2.title": "[Quinceañera Registration Website]",
+  "project.2.text":  "[HTML, CSS, JavaScript, MySQL]",
+  "project.3.title": "[Ice Cream Shop Website]",
+  "project.3.text":  "[HTML, CSS, JavaScript, Bootstrap]",
 
   "contact.title":         "Contact",
-  "contact.intro":         "[One sentence inviting people to write to you. Example: Have a project or a vacancy? Send me a message.]",
+  "contact.intro":         "[Interested in learning more about this project or collaborating on future initiatives? Feel free to get in touch with me to share ideas and discuss opportunities.]",
   "contact.emailLabel":    "Email",
-  "contact.linkedinValue": "[Your professional profile]",
+  "contact.linkedinValue": "[emiliricorico@icloud.com]",
 
   "footer.note": "[Emily Rico Rico] · Professional Technician in Web Programming · UniEspinal"
 };
