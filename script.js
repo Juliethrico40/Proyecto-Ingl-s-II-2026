@@ -29,7 +29,7 @@ const ES = {
   "about.title":          "Sobre Mí",
   "about.text":           "[I am a university student, dedicated to my studies and committed to achieving my goals and dreams. I consider myself a responsible and persevering person, with a desire to keep learning and growing both personally and professionally..]",
   "about.infoTitle":      "Información",
-  "about.labelLocation":  "U Colombia",
+  "about.labelLocation":  " Colombia",
   "about.valueLocation":  "[Ciudad], Colombia",
   "about.labelEmail":     "emiliricorico@icloud.com",
   "about.labelLanguages": "Idiomas",
@@ -56,29 +56,29 @@ const ES = {
   "resume.experience": "Experiencia",
 
   "edu.1.title": "Técnico Profesional en Programación Web",
-  "edu.1.text":  "[Una o dos frases sobre lo que estás aprendiendo y qué sabes hacer ahora.]",
-  "edu.2.title": "[Curso o certificación]",
-  "edu.2.text":  "[Qué aprendiste y para qué te sirve.]",
+  "edu.1.text":  "[I am currently a university student studying Systems Engineering, where I am developing knowledge in programming, web development, databases, and computer systems. I have worked on different academic projects that have helped me improve my technical skills, teamwork, and responsibility..]",
+  "edu.2.title": "[curso de ingles en idefum]",
+  "edu.2.text":  "[I learned vocabulary, pronunciation, listening comprehension, and basic communication in English. It helps me improve my ability to communicate in English and strengthen my academic and professional opportunities]",
 
-  "exp.1.title": "[Rol o tipo de proyecto]",
-  "exp.1.text":  "[Qué hiciste, con qué herramientas y qué resultado tuvo.]",
-  "exp.2.title": "[Rol o tipo de proyecto]",
-  "exp.2.text":  "[Qué hiciste, con qué herramientas y qué resultado tuvo.]",
+  "exp.1.title": "[Web Development Project]",
+  "exp.1.text":  "[I developed a web platform for managing computer lab availability. I used HTML, CSS, JavaScript, and MySQL to create the interface and manage the information. The result was a functional platform that makes it easier to check and manage available computer labs.]",
+  "exp.2.title": "[Quinceañera Registration Website]",
+  "exp.2.text":  "[I developed a website for registering guests for a quinceañera event. I used HTML, CSS, JavaScript, and MySQL to create the registration form and manage the data. The result was a simple and organized website for collecting and managing guest information.]",
 
   "portfolio.title": "Proyectos",
-  "project.1.title": "[Nombre del proyecto]",
-  "project.1.text":  "[Tecnologías usadas]",
-  "project.2.title": "[Nombre del proyecto]",
-  "project.2.text":  "[Tecnologías usadas]",
-  "project.3.title": "[Nombre del proyecto]",
-  "project.3.text":  "[Tecnologías usadas]",
+  "project.1.title": "[Computer Lab Management Platform]",
+  "project.1.text":  "[HTML, CSS, JavaScript, MySQ]",
+  "project.2.title": "[Quinceañera Registration Website]",
+  "project.2.text":  "[HTML, CSS, JavaScript, MySQL]",
+  "project.3.title": "[Ice Cream Shop Website]",
+  "project.3.text":  "[HTML, CSS, JavaScript, Bootstrap]",
 
   "contact.title":         "Contacto",
-  "contact.intro":         "[Una frase invitando a escribirte. Por ejemplo: ¿Tienes un proyecto o una vacante? Escríbeme.]",
-  "contact.emailLabel":    "Correo",
-  "contact.linkedinValue": "[Tu perfil profesional]",
+  "contact.intro":         "[Interested in learning more about this project or collaborating on future initiatives? Feel free to get in touch with me to share ideas and discuss opportunities..]",
+  "contact.emailLabel":    "emiliricorico@icloud.com",
+ 
 
-  "footer.note": "[Tu nombre] · Técnico Profesional en Programación Web · UniEspinal"
+  "footer.note": "[Emili Rioo] · Técnico Profesional en Programación Web · UniEspinal"
 };
 
 
