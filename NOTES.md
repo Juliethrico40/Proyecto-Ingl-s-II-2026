@@ -1,8 +1,8 @@
 # Translation Notes
 
-**Student:** [Your name]
-**Course:** [Inglés I / Inglés II]
-**Date:** [dd/mm/yyyy]
+**Student:** Julieth Emili Rico
+**Course:** Inglés II
+**Date:** 02/10/2026
 
 ---
 
@@ -31,7 +31,7 @@ This file is where you show that you understood those differences.
 Name **one thing** that appears in your Spanish version and does **not** appear
 in your English version. Explain why you removed it.
 
-> [Write 2–4 sentences in English.]
+> I made sure to leave out any personal data like my exact home address or my phone number. In Colombia, it is common to put this on a traditional CV, but for a public web profile in English, it is a strict rule to only include the city and a professional email address for security and privacy reasons.
 
 ---
 
@@ -40,7 +40,7 @@ in your English version. Explain why you removed it.
 Name **one technical term** that you kept in English in both versions.
 Explain why translating it would be a bad idea.
 
-> [Write 2–4 sentences in English.]
+> I kept the word "Bootstrap" in English in both versions of my profile. Bootstrap is the proper name of a specific CSS framework. Translating it to Spanish (which would literally mean something like "correa de bota") would completely ruin the meaning and other developers wouldn't understand what tool I used.
 
 ---
 
@@ -50,11 +50,11 @@ Name **one sentence** that was hard to write in English. Copy the Spanish
 version and your English version. Explain what you changed and why a
 word-by-word translation did not work.
 
-> Spanish: [copy your sentence here]
+> Spanish: El resultado fue una plataforma funcional que facilita consultar y gestionar los laboratorios disponibles.
 >
-> English: [copy your sentence here]
+> English: The result was a functional platform that makes it easier to check and manage available computer labs.
 >
-> [Write 2–4 sentences in English explaining the change.]
+> Translating "facilita consultar" word-by-word would be "facilitates to consult", which sounds very robotic and unnatural in English. I changed it to "makes it easier to check" because English professional writing prefers direct action verbs over formal, heavy nouns.
 
 ---
 
@@ -64,19 +64,16 @@ You may use dictionaries, translators and AI tools. But you must say so here.
 
 **Which tools did you use, and for what?**
 
-> [Write your answer in English. Be specific. For example: "I used
-> Cambridge Dictionary to check the difference between *develop* and
-> *design*." Or: "I used a translator for a first version of the About
-> section, and then I rewrote it because it sounded too formal."]
+> I used a translator to find specific vocabulary words for my projects (like "computer lab" and "guest registration"). I also used an AI tool to help me review my sentences and make sure I was using action verbs correctly in the past tense for my Experience section.
 
 ---
 
 ## Self-check before you submit
 
-- [ ] Both dictionaries in `script.js` have the same keys.
-- [ ] No `[square brackets]` are left in the page.
-- [ ] My page has no address, no phone number and no ID number.
-- [ ] The language button works in both directions.
-- [ ] All my links open the correct page.
-- [ ] I read my English text out loud and it sounds natural to me.
-- [ ] I can explain my profile in English, without reading it.
+- [x] Both dictionaries in `script.js` have the same keys.
+- [x] No `[square brackets]` are left in the page.
+- [x] My page has no address, no phone number and no ID number.
+- [x] The language button works in both directions.
+- [x] All my links open the correct page.
+- [x] I read my English text out loud and it sounds natural to me.
+- [x] I can explain my profile in English, without reading it.
