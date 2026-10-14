@@ -1,6 +1,6 @@
 # Translation Notes
 
-**Student:** Julieth Emili Rico
+**Student:** Emili Julieth Rico Rico
 **Course:** Inglés II
 **Date:** 02/10/2026
 
