@@ -105,7 +105,7 @@ const EN = {
   "about.infoTitle":      "Information",
   "about.labelLocation":  "Location",
   "about.valueLocation":  " Colombia",
-  "about.labelEmail":     "correo",
+  "about.labelEmail":     "Email",
   "about.labelLanguages": "Languages",
   "about.valueLanguages": "Spanish (native) · English (A1)",
   "about.labelStatus":    "Availability",
