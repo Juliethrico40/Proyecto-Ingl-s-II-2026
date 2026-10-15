@@ -29,7 +29,7 @@ const ES = {
   "about.title":          "Sobre Mí",
   "about.text":           "Soy estudiante universitario, me dedico a mis estudios y estoy comprometido a alcanzar mis metas y sueños. Me considero una persona responsable y perseverante, con el deseo de seguir aprendiendo y creciendo tanto personal como profesionalmente...",
   "about.infoTitle":      "Información",
-  "about.labelLocation":  "Pais",
+  "about.labelLocation":  "ubicacion",
   "about.valueLocation":  "Colombia",
   "about.labelEmail":     "correo",
   "about.labelLanguages": "Idiomas",
@@ -76,7 +76,7 @@ const ES = {
   "contact.title":         "Contacto",
   "contact.intro":         "¿Te interesa saber más sobre este proyecto o colaborar en futuras iniciativas? No dudes en ponerte en contacto conmigo para compartir ideas y hablar sobre posibles oportunidades.",
   "contact.emailLabel":    "emiliricorico@icloud.com",
- 
+  "contact.linkedinValue": "emiliricorico@icloud.com",
 
   "footer.note": "Emili Rioo · Técnico Profesional en Programación Web · UniEspinal"
 };
@@ -105,7 +105,7 @@ const EN = {
   "about.infoTitle":      "Information",
   "about.labelLocation":  "Location",
   "about.valueLocation":  " Colombia",
-  "about.labelEmail":     "emiliricorico@icloud.com",
+  "about.labelEmail":     "correo",
   "about.labelLanguages": "Languages",
   "about.valueLanguages": "Spanish (native) · English (A1)",
   "about.labelStatus":    "Availability",
