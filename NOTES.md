@@ -75,5 +75,4 @@ You may use dictionaries, translators and AI tools. But you must say so here.
 - [x] My page has no address, no phone number and no ID number.
 - [x] The language button works in both directions.
 - [x] All my links open the correct page.
-- [x] I read my English text out loud and it sounds natural to me.
 - [x] I can explain my profile in English, without reading it.
