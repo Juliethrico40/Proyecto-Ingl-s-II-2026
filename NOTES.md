@@ -64,7 +64,7 @@ You may use dictionaries, translators and AI tools. But you must say so here.
 
 **Which tools did you use, and for what?**
 
-> I used a translator to find specific vocabulary words for my projects (like "computer lab" and "guest registration"). I also used an AI tool to help me review my sentences and make sure I was using action verbs correctly in the past tense for my Experience section.
+> I used a translator to find specific vocabulary words for my projects (like "consolidation of cycles" and "guest registration"). I also used an AI tool to help me review my sentences and make sure I was using action verbs correctly in the past tense for my Experience section.
 
 ---
 
