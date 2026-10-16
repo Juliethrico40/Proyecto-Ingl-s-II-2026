@@ -1,0 +1,688 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Afianzamiento de Ciclos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3a3c8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .ejercicio {
+            background-color: rgb(222, 185, 215);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        .resultado {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .materia {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1>Afianzamiento de Ciclos</h1>
+
+    <!-- ========================================= -->
+    <!-- EJERCICIO 1 -->
+    <!-- ========================================= -->
+
+    <div class="ejercicio">
+
+        <h2>1. Promedio general de estudiantes</h2>
+
+        <label>Cantidad de estudiantes:</label>
+        <input type="number" id="cantidad1" min="1">
+
+        <button onclick="ejercicio1()">
+            Ingresar notas
+        </button>
+
+        <div id="notas1"></div>
+
+        <div id="resultado1" class="resultado"></div>
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- EJERCICIO 2 -->
+    <!-- ========================================= -->
+
+    <div class="ejercicio">
+
+        <h2>2. Aprobados, reprobados y promedio</h2>
+
+        <label>Cantidad de estudiantes:</label>
+        <input type="number" id="cantidad2" min="1">
+
+        <button onclick="crearEstudiantes2()">
+            Ingresar estudiantes
+        </button>
+
+        <div id="estudiantes2"></div>
+
+        <div id="resultado2" class="resultado"></div>
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- EJERCICIO 3 -->
+    <!-- ========================================= -->
+
+    <div class="ejercicio">
+
+        <h2>3. Análisis de un grupo de números</h2>
+
+        <label>Cantidad de números:</label>
+        <input type="number" id="cantidad3" min="1">
+
+        <button onclick="crearNumeros3()">
+            Ingresar números
+        </button>
+
+        <div id="numeros3"></div>
+
+        <div id="resultado3" class="resultado"></div>
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- EJERCICIO 4 -->
+    <!-- ========================================= -->
+
+    <div class="ejercicio">
+
+        <h2>4. Promedio de 4 materias</h2>
+
+        <label>Cantidad de estudiantes:</label>
+        <input type="number" id="cantidad4" min="1">
+
+        <button onclick="crearEstudiantes4()">
+            Ingresar estudiantes
+        </button>
+
+        <div id="estudiantes4"></div>
+
+        <div id="resultado4" class="resultado"></div>
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- EJERCICIO 5 -->
+    <!-- ========================================= -->
+
+    <div class="ejercicio">
+
+        <h2>5. Consumo de energía eléctrica</h2>
+
+        <label>Cantidad de clientes:</label>
+        <input type="number" id="cantidad5" min="1">
+
+        <label>Valor del kWh:</label>
+        <input type="number" id="tarifa" step="0.01">
+
+        <button onclick="crearClientes5()">
+            Ingresar clientes
+        </button>
+
+        <div id="clientes5"></div>
+
+        <div id="resultado5" class="resultado"></div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    // =========================================
+    // EJERCICIO 1
+    // =========================================
+
+    function ejercicio1() {
+
+        let cantidad = parseInt(document.getElementById("cantidad1").value);
+
+        if (cantidad <= 0 || isNaN(cantidad)) {
+            alert("Ingrese una cantidad válida.");
+            return;
+        }
+
+        let contenedor = document.getElementById("notas1");
+
+        contenedor.innerHTML = "";
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            contenedor.innerHTML += `
+                <label>Nota del estudiante ${i}:</label>
+                <input type="number" 
+                       id="nota1_${i}" 
+                       min="0" 
+                       max="5" 
+                       step="0.1">
+            `;
+        }
+
+        contenedor.innerHTML += `
+            <button onclick="calcularPromedio1()">
+                Calcular promedio
+            </button>
+        `;
+    }
+
+
+    function calcularPromedio1() {
+
+        let cantidad = parseInt(document.getElementById("cantidad1").value);
+
+        let suma = 0;
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            let nota = parseFloat(
+                document.getElementById(`nota1_${i}`).value
+            );
+
+            suma += nota;
+        }
+
+        let promedio = suma / cantidad;
+
+        document.getElementById("resultado1").innerHTML =
+            "Promedio general: " + promedio.toFixed(2);
+    }
+
+
+    // =========================================
+    // EJERCICIO 2
+    // =========================================
+
+    function crearEstudiantes2() {
+
+        let cantidad = parseInt(
+            document.getElementById("cantidad2").value
+        );
+
+        if (cantidad <= 0 || isNaN(cantidad)) {
+            alert("Ingrese una cantidad válida.");
+            return;
+        }
+
+        let contenedor =
+            document.getElementById("estudiantes2");
+
+        contenedor.innerHTML = "";
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            contenedor.innerHTML += `
+                <h3>Estudiante ${i}</h3>
+
+                <label>Identificación:</label>
+                <input type="text" id="id2_${i}">
+
+                <label>Nombre:</label>
+                <input type="text" id="nombre2_${i}">
+
+                <label>Nota definitiva:</label>
+                <input type="number"
+                       id="nota2_${i}"
+                       min="0"
+                       max="5"
+                       step="0.1">
+            `;
+        }
+
+        contenedor.innerHTML += `
+            <button onclick="calcularEjercicio2()">
+                Calcular resultados
+            </button>
+        `;
+    }
+
+
+    function calcularEjercicio2() {
+
+        let cantidad = parseInt(
+            document.getElementById("cantidad2").value
+        );
+
+        let aprobados = 0;
+        let reprobados = 0;
+        let suma = 0;
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            let nota = parseFloat(
+                document.getElementById(`nota2_${i}`).value
+            );
+
+            suma += nota;
+
+            if (nota >= 3) {
+                aprobados++;
+            } else {
+                reprobados++;
+            }
+        }
+
+        let promedio = suma / cantidad;
+
+        document.getElementById("resultado2").innerHTML = `
+            Alumnos aprobados: ${aprobados}<br>
+            Alumnos reprobados: ${reprobados}<br>
+            Promedio general: ${promedio.toFixed(2)}
+        `;
+    }
+
+
+    // =========================================
+    // EJERCICIO 3
+    // =========================================
+
+    function crearNumeros3() {
+
+        let cantidad = parseInt(
+            document.getElementById("cantidad3").value
+        );
+
+        if (cantidad <= 0 || isNaN(cantidad)) {
+            alert("Ingrese una cantidad válida.");
+            return;
+        }
+
+        let contenedor =
+            document.getElementById("numeros3");
+
+        contenedor.innerHTML = "";
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            contenedor.innerHTML += `
+                <label>Número ${i}:</label>
+                <input type="number" id="numero3_${i}">
+            `;
+        }
+
+        contenedor.innerHTML += `
+            <button onclick="calcularEjercicio3()">
+                Analizar números
+            </button>
+        `;
+    }
+
+
+    function calcularEjercicio3() {
+
+        let cantidad = parseInt(
+            document.getElementById("cantidad3").value
+        );
+
+        let mayor;
+        let menor;
+
+        let mayores150 = 0;
+        let negativos = 0;
+
+        let sumaPositivos = 0;
+        let cantidadPositivos = 0;
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            let numero = parseFloat(
+                document.getElementById(`numero3_${i}`).value
+            );
+
+            if (i === 1) {
+                mayor = numero;
+                menor = numero;
+            }
+
+            if (numero > mayor) {
+                mayor = numero;
+            }
+
+            if (numero < menor) {
+                menor = numero;
+            }
+
+            if (numero > 150) {
+                mayores150++;
+            }
+
+            if (numero < 0) {
+                negativos++;
+            }
+
+            if (numero > 0) {
+                sumaPositivos += numero;
+                cantidadPositivos++;
+            }
+        }
+
+        let promedioPositivos = 0;
+
+        if (cantidadPositivos > 0) {
+            promedioPositivos =
+                sumaPositivos / cantidadPositivos;
+        }
+
+        document.getElementById("resultado3").innerHTML = `
+            Número mayor: ${mayor}<br>
+            Número menor: ${menor}<br>
+            Cantidad de números mayores a 150: ${mayores150}<br>
+            Cantidad de números negativos: ${negativos}<br>
+            Promedio de los positivos: 
+            ${cantidadPositivos > 0
+                ? promedioPositivos.toFixed(2)
+                : "No hay positivos"}
+        `;
+    }
+
+
+    // =========================================
+    // EJERCICIO 4
+    // =========================================
+
+    function crearEstudiantes4() {
+
+        let cantidad = parseInt(
+            document.getElementById("cantidad4").value
+        );
+
+        if (cantidad <= 0 || isNaN(cantidad)) {
+            alert("Ingrese una cantidad válida.");
+            return;
+        }
+
+        let contenedor =
+            document.getElementById("estudiantes4");
+
+        contenedor.innerHTML = "";
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            contenedor.innerHTML += `
+                <h3>Estudiante ${i}</h3>
+
+                <label>Identificación:</label>
+                <input type="text" id="id4_${i}">
+
+                <label>Nombre:</label>
+                <input type="text" id="nombre4_${i}">
+
+                <div class="materia">
+                    <label>Materia 1:</label>
+                    <input type="number"
+                           id="materia1_${i}"
+                           min="0"
+                           max="5"
+                           step="0.1">
+                </div>
+
+                <div class="materia">
+                    <label>Materia 2:</label>
+                    <input type="number"
+                           id="materia2_${i}"
+                           min="0"
+                           max="5"
+                           step="0.1">
+                </div>
+
+                <div class="materia">
+                    <label>Materia 3:</label>
+                    <input type="number"
+                           id="materia3_${i}"
+                           min="0"
+                           max="5"
+                           step="0.1">
+                </div>
+
+                <div class="materia">
+                    <label>Materia 4:</label>
+                    <input type="number"
+                           id="materia4_${i}"
+                           min="0"
+                           max="5"
+                           step="0.1">
+                </div>
+            `;
+        }
+
+        contenedor.innerHTML += `
+            <button onclick="calcularEjercicio4()">
+                Calcular promedios
+            </button>
+        `;
+    }
+
+
+    function calcularEjercicio4() {
+
+        let cantidad = parseInt(
+            document.getElementById("cantidad4").value
+        );
+
+        let sumaPromedios = 0;
+
+        let resultado = "";
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            let nota1 = parseFloat(
+                document.getElementById(`materia1_${i}`).value
+            );
+
+            let nota2 = parseFloat(
+                document.getElementById(`materia2_${i}`).value
+            );
+
+            let nota3 = parseFloat(
+                document.getElementById(`materia3_${i}`).value
+            );
+
+            let nota4 = parseFloat(
+                document.getElementById(`materia4_${i}`).value
+            );
+
+            let promedio =
+                (nota1 + nota2 + nota3 + nota4) / 4;
+
+            sumaPromedios += promedio;
+
+            let nombre =
+                document.getElementById(`nombre4_${i}`).value;
+
+            resultado +=
+                `Promedio de ${nombre}: ${promedio.toFixed(2)}<br>`;
+        }
+
+        let promedioGeneral =
+            sumaPromedios / cantidad;
+
+        resultado += `
+            <br>
+            <strong>
+                Promedio general del grupo:
+                ${promedioGeneral.toFixed(2)}
+            </strong>
+        `;
+
+        document.getElementById("resultado4").innerHTML =
+            resultado;
+    }
+
+
+    // =========================================
+    // EJERCICIO 5
+    // =========================================
+
+    function crearClientes5() {
+
+        let cantidad = parseInt(
+            document.getElementById("cantidad5").value
+        );
+
+        if (cantidad <= 0 || isNaN(cantidad)) {
+            alert("Ingrese una cantidad válida.");
+            return;
+        }
+
+        let contenedor =
+            document.getElementById("clientes5");
+
+        contenedor.innerHTML = "";
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            contenedor.innerHTML += `
+                <h3>Cliente ${i}</h3>
+
+                <label>Identificación:</label>
+                <input type="text" id="id5_${i}">
+
+                <label>Lectura anterior:</label>
+                <input type="number"
+                       id="anterior5_${i}"
+                       min="0">
+
+                <label>Lectura actual:</label>
+                <input type="number"
+                       id="actual5_${i}"
+                       min="0">
+            `;
+        }
+
+        contenedor.innerHTML += `
+            <button onclick="calcularEjercicio5()">
+                Calcular consumo
+            </button>
+        `;
+    }
+
+
+    function calcularEjercicio5() {
+
+        let cantidad = parseInt(
+            document.getElementById("cantidad5").value
+        );
+
+        let tarifa = parseFloat(
+            document.getElementById("tarifa").value
+        );
+
+        let sumaConsumo = 0;
+
+        let resultado = "";
+
+        for (let i = 1; i <= cantidad; i++) {
+
+            let anterior = parseFloat(
+                document.getElementById(`anterior5_${i}`).value
+            );
+
+            let actual = parseFloat(
+                document.getElementById(`actual5_${i}`).value
+            );
+
+            let identificacion =
+                document.getElementById(`id5_${i}`).value;
+
+            let consumo = actual - anterior;
+
+            let total = consumo * tarifa;
+
+            sumaConsumo += consumo;
+
+            resultado += `
+                Cliente ${identificacion}<br>
+                Consumo: ${consumo.toFixed(2)} kWh<br>
+                Total a pagar: $${total.toFixed(2)}
+                <hr>
+            `;
+        }
+
+        let promedio = sumaConsumo / cantidad;
+
+        resultado += `
+            <strong>
+                Promedio general de consumo:
+                ${promedio.toFixed(2)} kWh
+            </strong>
+        `;
+
+        document.getElementById("resultado5").innerHTML =
+            resultado;
+    }
+
+</script>
+
+</body>
+</html>
