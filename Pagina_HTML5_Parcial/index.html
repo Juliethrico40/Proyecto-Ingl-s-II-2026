@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palacio De Princesas</title>
+    <link rel="stylesheet" href="Css/Style.css">
+
+   
+
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="menu-centro">
+
+
+           <a href="#inicial" class="active">Inicio</a>
+           <a href="registro.html" class="derecha">Registro</a>
+           <a href="Historial.html">Historial</a>
+        </div>
+    </nav>
+
+    
+    <div class="carrusel">
+        <div class="slides" id="slides">
+            <div class="slide"><img src="img/imagen_Emily_quince.jpeg" alt="Vestido Emily Quince"></div>
+            <div class="slide"><img src="img/vestido_rojo.jpeg" alt="Vestido Rojo"></div>
+            <div class="slide"><img src="img/vestido_lila.jpg" alt="Vestido Lila"></div>
+        </div>
+
+        <button class="btn prev" onclick="moverSlide(-1)">❮</button>
+        <button class="btn next" onclick="moverSlide(1)">❯</button>
+    </div>
+
+    <h1>Palacio De Princesas</h1>
+    <p>Bienvenidos a nuestra plataforma virtual donde descubres la magia de tus quince años: vestidos, coronas y hermosos anillos!</p>
+</header>
+
+<!-- Sección de Vestidos -->
+<section id="vestidos">
+    <h2 id="inicial">Vestidos Hermosos</h2>
+    <div class="gallery">
+        <img src="img/imagen_Emily_quince.jpeg" alt="Vestido Emily Quince">
+        <img src="img/vestido_rojo.jpeg" alt="Vestido Rojo">
+        <img src="img/vestido_lila.jpg" alt="Vestido Lila">
+        <img src="img/vestido_elegante.webp" alt="Vestido Elegante">
+        <img src="img/vestido_rosa_quince.avif" alt="Vestido Rosa Quince">
+    </div>
+</section>
+
+<!-- Sección de coronas -->
+<section id="coronas">
+    <h2>Las mejores coronas</h2>
+    <img src="img/corona.jpeg" class="single-img" alt="Corona">
+    <img src="img/corona_lila.jpg" class="single-img" alt="Corona Lila">
+    <img src="img/corona_azul.jpg" class="single-img" alt="Corona Azul">
+    <img src="img/corona_dorada.webp" class="single-img" alt="Corona Dorada">
+    <img src="img/corona_rosada.webp" class="single-img" alt="Corona Rosada">
+</section>
+
+<!-- Sección de anillos-->
+<section id="Anillos">
+    <h2>Anillos</h2>
+    <div class="gallery">
+        <img src="img/anillo.webp" alt="Anillo">
+        <img src="img/anillo2.webp" alt="Anillo 2">
+        <img src="img/anillo3.webp" alt="Anillo 3">
+        <img src="img/anillo4.jpg" alt="Anillo 4">
+        <img src="img/anillo5.webp" alt="Anillo 5">
+    </div>
+</section>
+
+<footer>
+    <p>&copy; La mejor plataforma virtual</p>
+</footer>
+
+
+
+<!-- SCRIPT DEL CARRUSEL -->
+<script>
+let index = 0;
+
+function mostrarSlide() {
+    const slides = document.getElementById("slides");
+    slides.style.transform = "translateX(" + (-index * 100) + "%)";
+}
+
+function moverSlide(direccion) {
+    const total = document.querySelectorAll(".slide").length;
+    index += direccion;
+
+    if (index >= total) index = 0;
+    if (index < 0) index = total - 1;
+
+    mostrarSlide();
+}
+
+// automático cada 3 segundos
+setInterval(() => {
+    moverSlide(1);
+}, 3000);
+</script>
+
+</body>
+</html>
