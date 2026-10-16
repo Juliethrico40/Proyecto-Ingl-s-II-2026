@@ -76,9 +76,9 @@ const ES = {
   "contact.title":         "Contacto",
   "contact.intro":         "¿Te interesa saber más sobre este proyecto o colaborar en futuras iniciativas? No dudes en ponerte en contacto conmigo para compartir ideas y hablar sobre posibles oportunidades.",
   "contact.emailLabel":    "correo",
-  "contact.linkedinValue": "emiliricorico@icloud.com",
+  "contact.linkedinValue": "Julieth Rico",
 
-  "footer.note": "Emili Rioo · Técnico Profesional en Programación Web · UniEspinal"
+  "footer.note": "Emili Rico · Técnico Profesional en Programación Web · UniEspinal"
 };
 
 
@@ -150,9 +150,9 @@ const EN = {
   "contact.title":         "Contact",
   "contact.intro":         "Interested in learning more about this project or collaborating on future initiatives? Feel free to get in touch with me to share ideas and discuss opportunities.",
   "contact.emailLabel":    "Email",
-  "contact.linkedinValue": "emiliricorico@icloud.com",
+  "contact.linkedinValue": "Julieth Rico",
 
-  "footer.note": "Emily Rico Rico· Professional Technician in Web Programming · UniEspinal"
+  "footer.note": "Emily Rico· Professional Technician in Web Programming · UniEspinal"
 };
 
 
