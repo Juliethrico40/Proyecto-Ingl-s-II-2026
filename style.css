@@ -13,9 +13,9 @@
   --color-fondo:        #1e2326;
   --color-fondo-alt:    #252a2e;
   --color-fondo-oscuro: #131517;
-  --color-acento:       #1cb698;
-  --color-texto:        #ffffff;
-  --color-texto-suave:  #b9c2c6;
+  --color-acento:       #f38fce;
+  --color-texto:       #9c60e6,
+  --color-texto-suave:  #ffffff,
 
   --fuente-titulo: 'Righteous', cursive;
   --fuente-texto:  'Work Sans', sans-serif;
