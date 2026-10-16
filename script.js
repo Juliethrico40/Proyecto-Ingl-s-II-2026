@@ -75,7 +75,7 @@ const ES = {
 
   "contact.title":         "Contacto",
   "contact.intro":         "¿Te interesa saber más sobre este proyecto o colaborar en futuras iniciativas? No dudes en ponerte en contacto conmigo para compartir ideas y hablar sobre posibles oportunidades.",
-  "contact.emailLabel":    "emiliricorico@icloud.com",
+  "contact.emailLabel":    "correo",
   "contact.linkedinValue": "emiliricorico@icloud.com",
 
   "footer.note": "Emili Rioo · Técnico Profesional en Programación Web · UniEspinal"
