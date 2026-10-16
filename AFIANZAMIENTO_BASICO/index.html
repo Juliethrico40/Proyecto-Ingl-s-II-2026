@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ejercicios de Programación - UniEspinal</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdf7fc;
+            color: #4b3b4f;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            background: #d98cb3;
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(120, 70, 110, 0.20);
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* MENÚ */
+
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #f0d5e6;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: #8b4f79;
+            font-weight: bold;
+            padding: 9px 14px;
+            margin: 4px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #d98cb3;
+            color: white;
+        }
+
+        /* CONTENEDOR */
+
+        .contenedor {
+            width: 92%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        /* TITULOS */
+
+        .seccion {
+            text-align: center;
+            margin: 40px 0 25px;
+        }
+
+        .seccion h2 {
+            color: #96527e;
+            font-size: 28px;
+        }
+
+        .seccion span {
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: #c58bdd;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        /* TARJETAS */
+
+        .ejercicio {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 18px;
+            border: 1px solid #efd9e8;
+            box-shadow: 0 5px 15px rgba(120, 70, 110, 0.10);
+        }
+
+        .ejercicio h3 {
+            color: #9b507f;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .descripcion {
+            color: #6d5b6d;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        /* CAMPOS */
+
+        .campos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e5c7df;
+            border-radius: 10px;
+            outline: none;
+            background: #fffafd;
+            font-size: 15px;
+        }
+
+        input:focus {
+            border-color: #c58bdd;
+            box-shadow: 0 0 0 3px #f4e5f8;
+        }
+
+        /* BOTONES */
+
+        button {
+            margin-top: 16px;
+            background: #b875a1;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #96527e;
+            transform: translateY(-2px);
+        }
+
+        /* RESULTADO */
+
+        .resultado {
+            margin-top: 16px;
+            padding: 14px;
+            min-height: 20px;
+            background: #faf0f8;
+            border-left: 5px solid #c58bdd;
+            border-radius: 8px;
+            color: #604b5f;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #76536f;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 6px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .contenedor {
+                width: 94%;
+            }
+
+            .ejercicio {
+                padding: 20px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 7px 10px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ========================= -->
+<!-- ENCABEZADO -->
+<!-- ========================= -->
+
+<header>
+
+    <h1>🌷 Introducción a la Programación</h1>
+
+    <p>Ejercicios básicos y condicionales</p>
+
+    <p>UniEspinal</p>
+
+</header>
+
+
+<!-- ========================= -->
+<!-- MENÚ -->
+<!-- ========================= -->
+
+<nav>
+
+    <a href="#basicos">Básicos</a>
+
+    <a href="#ej1">1</a>
+    <a href="#ej2">2</a>
+    <a href="#ej3">3</a>
+    <a href="#ej4">4</a>
+    <a href="#ej5">5</a>
+    <a href="#ej6">6</a>
+    <a href="#ej7">7</a>
+    <a href="#ej8">8</a>
+    <a href="#ej9">9</a>
+    <a href="#ej10">10</a>
+
+    <a href="#condicionales">Condicionales</a>
+
+    <a href="#c1">C1</a>
+    <a href="#c2">C2</a>
+    <a href="#c3">C3</a>
+    <a href="#c4">C4</a>
+    <a href="#c5">C5</a>
+    <a href="#c6">C6</a>
+    <a href="#c7">C7</a>
+
+</nav>
+
+
+<div class="contenedor">
+
+
+<!-- ========================= -->
+<!-- EJERCICIOS BÁSICOS -->
+<!-- ========================= -->
+
+<div class="seccion" id="basicos">
+
+    <h2>Ejercicios básicos</h2>
+
+    <span></span>
+
+</div>
+
+
+<!-- EJERCICIO 1 -->
+
+<div class="ejercicio" id="ej1">
+
+    <h3>🌸 1. Suma de dos números</h3>
+
+    <p class="descripcion">
+        Obtener la suma de dos números cualesquiera.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="num1"
+               placeholder="Primer número">
+
+        <input type="number"
+               id="num2"
+               placeholder="Segundo número">
+
+    </div>
+
+    <button onclick="ejercicio1()">
+        Calcular suma
+    </button>
+
+    <div class="resultado" id="resultado1"></div>
+
+</div>
+
+
+<!-- EJERCICIO 2 -->
+
+<div class="ejercicio" id="ej2">
+
+    <h3>💗 2. Área de un rectángulo</h3>
+
+    <p class="descripcion">
+        Calcular el área de un rectángulo utilizando la base y la altura.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="base"
+               placeholder="Base">
+
+        <input type="number"
+               id="altura"
+               placeholder="Altura">
+
+    </div>
+
+    <button onclick="ejercicio2()">
+        Calcular área
+    </button>
+
+    <div class="resultado" id="resultado2"></div>
+
+</div>
+
+
+<!-- EJERCICIO 3 -->
+
+<div class="ejercicio" id="ej3">
+
+    <h3>💜 3. Nota definitiva</h3>
+
+    <p class="descripcion">
+        Calcular la nota definitiva teniendo en cuenta los tres cortes:
+        30%, 30% y 40%.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="nota1"
+               placeholder="Primer corte">
+
+        <input type="number"
+               id="nota2"
+               placeholder="Segundo corte">
+
+        <input type="number"
+               id="nota3"
+               placeholder="Tercer corte">
+
+    </div>
+
+    <button onclick="ejercicio3()">
+        Calcular nota
+    </button>
+
+    <div class="resultado" id="resultado3"></div>
+
+</div>
+
+
+<!-- EJERCICIO 4 -->
+
+<div class="ejercicio" id="ej4">
+
+    <h3>🌷 4. Área de una circunferencia</h3>
+
+    <p class="descripcion">
+        Fórmula: Área = PI × R². Se utiliza PI = 3.1416.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="radio"
+               placeholder="Radio">
+
+    </div>
+
+    <button onclick="ejercicio4()">
+        Calcular área
+    </button>
+
+    <div class="resultado" id="resultado4"></div>
+
+</div>
+
+
+<!-- EJERCICIO 5 -->
+
+<div class="ejercicio" id="ej5">
+
+    <h3>🌺 5. Área del terreno</h3>
+
+    <p class="descripcion">
+        El terreno está compuesto por un triángulo y un rectángulo.
+        Ingrese los valores de A, B y C.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="A"
+               placeholder="Medida A">
+
+        <input type="number"
+               id="B"
+               placeholder="Medida B">
+
+        <input type="number"
+               id="C"
+               placeholder="Medida C">
+
+    </div>
+
+    <button onclick="ejercicio5()">
+        Calcular área
+    </button>
+
+    <div class="resultado" id="resultado5"></div>
+
+</div>
+
+
+<!-- EJERCICIO 6 -->
+
+<div class="ejercicio" id="ej6">
+
+    <h3>💜 6. Área de la figura</h3>
+
+    <p class="descripcion">
+        La figura está formada por dos triángulos rectángulos y una
+        semicircunferencia. Ingrese H y R.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="H"
+               placeholder="Hipotenusa H">
+
+        <input type="number"
+               id="R"
+               placeholder="Radio R">
+
+    </div>
+
+    <button onclick="ejercicio6()">
+        Calcular área
+    </button>
+
+    <div class="resultado" id="resultado6"></div>
+
+</div>
+
+
+<!-- EJERCICIO 7 -->
+
+<div class="ejercicio" id="ej7">
+
+    <h3>🥛 7. Producción de leche</h3>
+
+    <p class="descripcion">
+        Convertir los litros producidos a galones y calcular cuánto
+        recibirá el productor.
+        1 galón = 3.785 litros.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="litros"
+               placeholder="Litros producidos">
+
+        <input type="number"
+               id="precioLitro"
+               placeholder="Precio por litro">
+
+    </div>
+
+    <button onclick="ejercicio7()">
+        Calcular
+    </button>
+
+    <div class="resultado" id="resultado7"></div>
+
+</div>
+
+
+<!-- EJERCICIO 8 -->
+
+<div class="ejercicio" id="ej8">
+
+    <h3>📍 8. Distancia entre dos puntos</h3>
+
+    <p class="descripcion">
+        Calcular la distancia entre dos puntos del plano cartesiano.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="x1"
+               placeholder="X1">
+
+        <input type="number"
+               id="y1"
+               placeholder="Y1">
+
+        <input type="number"
+               id="x2"
+               placeholder="X2">
+
+        <input type="number"
+               id="y2"
+               placeholder="Y2">
+
+    </div>
+
+    <button onclick="ejercicio8()">
+        Calcular distancia
+    </button>
+
+    <div class="resultado" id="resultado8"></div>
+
+</div>
+
+
+<!-- EJERCICIO 9 -->
+
+<div class="ejercicio" id="ej9">
+
+    <h3>👗 9. Conversión de metros a pulgadas</h3>
+
+    <p class="descripcion">
+        Convertir metros a pulgadas.
+        1 pulgada = 0.0254 metros.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="metros"
+               placeholder="Metros">
+
+    </div>
+
+    <button onclick="ejercicio9()">
+        Convertir
+    </button>
+
+    <div class="resultado" id="resultado9"></div>
+
+</div>
+
+
+<!-- EJERCICIO 10 -->
+
+<div class="ejercicio" id="ej10">
+
+    <h3>💧 10. Llenado de albercas</h3>
+
+    <p class="descripcion">
+        Calcular los metros cúbicos de agua necesarios para llenar
+        una cantidad determinada de albercas.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="cantidad"
+               placeholder="Cantidad de albercas">
+
+        <input type="number"
+               id="largo"
+               placeholder="Largo">
+
+        <input type="number"
+               id="ancho"
+               placeholder="Ancho">
+
+        <input type="number"
+               id="profundidad"
+               placeholder="Profundidad">
+
+        <input type="number"
+               id="precio"
+               placeholder="Precio por m³">
+
+    </div>
+
+    <button onclick="ejercicio10()">
+        Calcular
+    </button>
+
+    <div class="resultado" id="resultado10"></div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- CONDICIONALES -->
+<!-- ========================= -->
+
+<div class="seccion" id="condicionales">
+
+    <h2>Ejercicios con condicionales</h2>
+
+    <span></span>
+
+</div>
+
+
+<!-- CONDICIONAL 1 -->
+
+<div class="ejercicio" id="c1">
+
+    <h3>🌸 1. Determinar cuál es mayor</h3>
+
+    <p class="descripcion">
+        Determinar cuál de dos valores proporcionados es el mayor.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="valor1"
+               placeholder="Primer valor">
+
+        <input type="number"
+               id="valor2"
+               placeholder="Segundo valor">
+
+    </div>
+
+    <button onclick="condicional1()">
+        Comparar
+    </button>
+
+    <div class="resultado" id="resultado11"></div>
+
+</div>
+
+
+<!-- CONDICIONAL 2 -->
+
+<div class="ejercicio" id="c2">
+
+    <h3>💗 2. Positivo o negativo</h3>
+
+    <p class="descripcion">
+        Determinar si un número es positivo o negativo.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="numero"
+               placeholder="Ingrese un número">
+
+    </div>
+
+    <button onclick="condicional2()">
+        Determinar
+    </button>
+
+    <div class="resultado" id="resultado12"></div>
+
+</div>
+
+
+<!-- CONDICIONAL 3 -->
+
+<div class="ejercicio" id="c3">
+
+    <h3>✏️ 3. Precio de lápices</h3>
+
+    <p class="descripcion">
+        Si son 1000 o más lápices, cada uno cuesta $1.100.
+        De lo contrario, cuesta $1.300.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="cantidadLapices"
+               placeholder="Cantidad de lápices">
+
+    </div>
+
+    <button onclick="condicional3()">
+        Calcular
+    </button>
+
+    <div class="resultado" id="resultado13"></div>
+
+</div>
+
+
+<!-- CONDICIONAL 4 -->
+
+<div class="ejercicio" id="c4">
+
+    <h3>👗 4. Descuento de Almacenes Pepita</h3>
+
+    <p class="descripcion">
+        Si el precio es superior a $25.000 se aplica un descuento del 17%.
+        De lo contrario, se aplica un descuento del 5%.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="precioPrenda"
+               placeholder="Precio de la prenda">
+
+    </div>
+
+    <button onclick="condicional4()">
+        Calcular descuento
+    </button>
+
+    <div class="resultado" id="resultado14"></div>
+
+</div>
+
+
+<!-- CONDICIONAL 5 -->
+
+<div class="ejercicio" id="c5">
+
+    <h3>🌺 5. Ordenar tres cantidades</h3>
+
+    <p class="descripcion">
+        Determinar cuál de tres cantidades es la mayor y mostrarlas
+        de forma descendente.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="numero1"
+               placeholder="Número 1">
+
+        <input type="number"
+               id="numero2"
+               placeholder="Número 2">
+
+        <input type="number"
+               id="numero3"
+               placeholder="Número 3">
+
+    </div>
+
+    <button onclick="condicional5()">
+        Ordenar
+    </button>
+
+    <div class="resultado" id="resultado15"></div>
+
+</div>
+
+
+<!-- CONDICIONAL 6 -->
+
+<div class="ejercicio" id="c6">
+
+    <h3>🍽️ 6. Restaurante "La Parrillada"</h3>
+
+    <p class="descripcion">
+        Hasta 90 personas: $10.000 por persona.
+        <br>
+        Más de 90 y hasta 150: $8.500.
+        <br>
+        Más de 150: $7.500.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="numPersonas"
+               placeholder="Número de personas">
+
+    </div>
+
+    <button onclick="condicional6()">
+        Calcular presupuesto
+    </button>
+
+    <div class="resultado" id="resultado16"></div>
+
+</div>
+
+
+<!-- CONDICIONAL 7 -->
+
+<div class="ejercicio" id="c7">
+
+    <h3>💜 7. Costo de consulta</h3>
+
+    <p class="descripcion">
+        Primeras 3 citas: $100.000 cada una.
+        <br>
+        Siguientes 2: $80.000 cada una.
+        <br>
+        Siguientes 3: $70.000 cada una.
+        <br>
+        Las restantes: $50.000 cada una.
+    </p>
+
+    <div class="campos">
+
+        <input type="number"
+               id="cita"
+               placeholder="Número de cita">
+
+    </div>
+
+    <button onclick="condicional7()">
+        Calcular
+    </button>
+
+    <div class="resultado" id="resultado17"></div>
+
+</div>
+
+
+</div>
+
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+    <p>🌷 <strong>Introducción a la Programación</strong> 🌷</p>
+
+    <p>ITFIP</p>
+
+    <p>Ejercicios básicos y condicionales</p>
+
+</footer>
+
+
+<script>
+
+
+// =====================================
+// EJERCICIO 1
+// =====================================
+
+function ejercicio1() {
+
+    let n1 = Number(
+        document.getElementById("num1").value
+    );
+
+    let n2 = Number(
+        document.getElementById("num2").value
+    );
+
+    let suma = n1 + n2;
+
+    document.getElementById("resultado1").innerHTML =
+        "💗 La suma es: " + suma;
+}
+
+
+// =====================================
+// EJERCICIO 2
+// =====================================
+
+function ejercicio2() {
+
+    let base = Number(
+        document.getElementById("base").value
+    );
+
+    let altura = Number(
+        document.getElementById("altura").value
+    );
+
+    let area = base * altura;
+
+    document.getElementById("resultado2").innerHTML =
+        "🌸 El área es: " + area;
+}
+
+
+// =====================================
+// EJERCICIO 3
+// =====================================
+
+function ejercicio3() {
+
+    let n1 = Number(
+        document.getElementById("nota1").value
+    );
+
+    let n2 = Number(
+        document.getElementById("nota2").value
+    );
+
+    let n3 = Number(
+        document.getElementById("nota3").value
+    );
+
+    let definitiva =
+        (n1 * 0.30) +
+        (n2 * 0.30) +
+        (n3 * 0.40);
+
+    document.getElementById("resultado3").innerHTML =
+        "💜 Nota definitiva: " +
+        definitiva.toFixed(2);
+}
+
+
+// =====================================
+// EJERCICIO 4
+// =====================================
+
+function ejercicio4() {
+
+    let radio = Number(
+        document.getElementById("radio").value
+    );
+
+    let PI = 3.1416;
+
+    let area =
+        PI * Math.pow(radio, 2);
+
+    document.getElementById("resultado4").innerHTML =
+        "🌷 Área de la circunferencia: " +
+        area.toFixed(2);
+}
+
+
+// =====================================
+// EJERCICIO 5
+// =====================================
+
+function ejercicio5() {
+
+    let A = Number(
+        document.getElementById("A").value
+    );
+
+    let B = Number(
+        document.getElementById("B").value
+    );
+
+    let C = Number(
+        document.getElementById("C").value
+    );
+
+    let alturaTriangulo = A - C;
+
+    let areaTriangulo =
+        (B * alturaTriangulo) / 2;
+
+    let areaRectangulo =
+        B * C;
+
+    let areaTotal =
+        areaTriangulo + areaRectangulo;
+
+    document.getElementById("resultado5").innerHTML =
+        "Área del triángulo: " +
+        areaTriangulo.toFixed(2) +
+
+        "<br>Área del rectángulo: " +
+        areaRectangulo.toFixed(2) +
+
+        "<br>🌸 Área total: " +
+        areaTotal.toFixed(2);
+}
+
+
+// =====================================
+// EJERCICIO 6
+// =====================================
+
+function ejercicio6() {
+
+    let H = Number(
+        document.getElementById("H").value
+    );
+
+    let R = Number(
+        document.getElementById("R").value
+    );
+
+    if (H < R) {
+
+        document.getElementById("resultado6").innerHTML =
+            "⚠️ H debe ser mayor o igual que R.";
+
+        return;
+    }
+
+    let altura =
+        Math.sqrt(
+            Math.pow(H, 2) -
+            Math.pow(R, 2)
+        );
+
+    let areaTriangulos =
+        R * altura;
+
+    let PI = 3.1416;
+
+    let areaSemicirculo =
+        (PI * Math.pow(R, 2)) / 2;
+
+    let areaTotal =
+        areaTriangulos +
+        areaSemicirculo;
+
+    document.getElementById("resultado6").innerHTML =
+        "Altura: " +
+        altura.toFixed(2) +
+
+        "<br>Área de los triángulos: " +
+        areaTriangulos.toFixed(2) +
+
+        "<br>Área semicircular: " +
+        areaSemicirculo.toFixed(2) +
+
+        "<br>💜 Área total: " +
+        areaTotal.toFixed(2);
+}
+
+
+// =====================================
+// EJERCICIO 7
+// =====================================
+
+function ejercicio7() {
+
+    let litros =
+        Number(
+            document.getElementById("litros").value
+        );
+
+    let precio =
+        Number(
+            document.getElementById("precioLitro").value
+        );
+
+    let galones =
+        litros / 3.785;
+
+    let total =
+        litros * precio;
+
+    document.getElementById("resultado7").innerHTML =
+        "🥛 Galones: " +
+        galones.toFixed(2) +
+
+        "<br>Valor a recibir: $" +
+        total.toLocaleString("es-CO");
+}
+
+
+// =====================================
+// EJERCICIO 8
+// =====================================
+
+function ejercicio8() {
+
+    let x1 =
+        Number(document.getElementById("x1").value);
+
+    let y1 =
+        Number(document.getElementById("y1").value);
+
+    let x2 =
+        Number(document.getElementById("x2").value);
+
+    let y2 =
+        Number(document.getElementById("y2").value);
+
+    let distancia =
+        Math.sqrt(
+            Math.pow(x2 - x1, 2) +
+            Math.pow(y2 - y1, 2)
+        );
+
+    document.getElementById("resultado8").innerHTML =
+        "📍 Distancia: " +
+        distancia.toFixed(2);
+}
+
+
+// =====================================
+// EJERCICIO 9
+// =====================================
+
+function ejercicio9() {
+
+    let metros =
+        Number(
+            document.getElementById("metros").value
+        );
+
+    let pulgadas =
+        metros / 0.0254;
+
+    document.getElementById("resultado9").innerHTML =
+        "👗 Resultado: " +
+        pulgadas.toFixed(2) +
+        " pulgadas";
+}
+
+
+// =====================================
+// EJERCICIO 10
+// =====================================
+
+function ejercicio10() {
+
+    let cantidad =
+        Number(
+            document.getElementById("cantidad").value
+        );
+
+    let largo =
+        Number(
+            document.getElementById("largo").value
+        );
+
+    let ancho =
+        Number(
+            document.getElementById("ancho").value
+        );
+
+    let profundidad =
+        Number(
+            document.getElementById("profundidad").value
+        );
+
+    let precio =
+        Number(
+            document.getElementById("precio").value
+        );
+
+    let volumen =
+        largo *
+        ancho *
+        profundidad;
+
+    let volumenTotal =
+        volumen * cantidad;
+
+    let costo =
+        volumenTotal * precio;
+
+    document.getElementById("resultado10").innerHTML =
+        "💧 Volumen total: " +
+        volumenTotal.toFixed(2) +
+        " m³" +
+
+        "<br>💗 Costo total: $" +
+        costo.toLocaleString("es-CO");
+}
+
+
+// =====================================
+// CONDICIONAL 1
+// =====================================
+
+function condicional1() {
+
+    let a =
+        Number(
+            document.getElementById("valor1").value
+        );
+
+    let b =
+        Number(
+            document.getElementById("valor2").value
+        );
+
+    if (a > b) {
+
+        document.getElementById("resultado11").innerHTML =
+            "🌸 El mayor es: " + a;
+
+    } else if (b > a) {
+
+        document.getElementById("resultado11").innerHTML =
+            "🌸 El mayor es: " + b;
+
+    } else {
+
+        document.getElementById("resultado11").innerHTML =
+            "💗 Los valores son iguales.";
+    }
+}
+
+
+// =====================================
+// CONDICIONAL 2
+// =====================================
+
+function condicional2() {
+
+    let numero =
+        Number(
+            document.getElementById("numero").value
+        );
+
+    if (numero > 0) {
+
+        document.getElementById("resultado12").innerHTML =
+            "💜 El número es positivo.";
+
+    } else if (numero < 0) {
+
+        document.getElementById("resultado12").innerHTML =
+            "🌷 El número es negativo.";
+
+    } else {
+
+        document.getElementById("resultado12").innerHTML =
+            "El número es cero.";
+    }
+}
+
+
+// =====================================
+// CONDICIONAL 3
+// =====================================
+
+function condicional3() {
+
+    let cantidad =
+        Number(
+            document.getElementById("cantidadLapices").value
+        );
+
+    let precio;
+
+    if (cantidad >= 1000) {
+
+        precio = 1100;
+
+    } else {
+
+        precio = 1300;
+    }
+
+    let total =
+        cantidad * precio;
+
+    document.getElementById("resultado13").innerHTML =
+        "Precio por lápiz: $" +
+        precio.toLocaleString("es-CO") +
+
+        "<br>🌸 Total: $" +
+        total.toLocaleString("es-CO");
+}
+
+
+// =====================================
+// CONDICIONAL 4
+// =====================================
+
+function condicional4() {
+
+    let precio =
+        Number(
+            document.getElementById("precioPrenda").value
+        );
+
+    let descuento;
+
+    if (precio > 25000) {
+
+        descuento = precio * 0.17;
+
+    } else {
+
+        descuento = precio * 0.05;
+    }
+
+    let precioFinal =
+        precio - descuento;
+
+    document.getElementById("resultado14").innerHTML =
+        "💗 Descuento: $" +
+        descuento.toLocaleString("es-CO") +
+
+        "<br>Precio final: $" +
+        precioFinal.toLocaleString("es-CO");
+}
+
+
+// =====================================
+// CONDICIONAL 5
+// =====================================
+
+function condicional5() {
+
+    let a =
+        Number(
+            document.getElementById("numero1").value
+        );
+
+    let b =
+        Number(
+            document.getElementById("numero2").value
+        );
+
+    let c =
+        Number(
+            document.getElementById("numero3").value
+        );
+
+    let numeros = [a, b, c];
+
+    numeros.sort(function(x, y) {
+        return y - x;
+    });
+
+    document.getElementById("resultado15").innerHTML =
+        "🌺 Orden descendente: " +
+        numeros.join(" → ") +
+
+        "<br>Mayor: " +
+        numeros[0];
+}
+
+
+// =====================================
+// CONDICIONAL 6
+// =====================================
+
+function condicional6() {
+
+    let personas =
+        Number(
+            document.getElementById("numPersonas").value
+        );
+
+    let precioPersona;
+
+    if (personas <= 90) {
+
+        precioPersona = 10000;
+
+    } else if (personas <= 150) {
+
+        precioPersona = 8500;
+
+    } else {
+
+        precioPersona = 7500;
+    }
+
+    let total =
+        personas * precioPersona;
+
+    document.getElementById("resultado16").innerHTML =
+        "🍽️ Precio por persona: $" +
+        precioPersona.toLocaleString("es-CO") +
+
+        "<br>💜 Total: $" +
+        total.toLocaleString("es-CO");
+}
+
+
+// =====================================
+// CONDICIONAL 7
+// =====================================
+
+function condicional7() {
+
+    let cita =
+        Number(
+            document.getElementById("cita").value
+        );
+
+    if (cita < 1) {
+
+        document.getElementById("resultado17").innerHTML =
+            "⚠️ Ingrese una cita válida.";
+
+        return;
+    }
+
+    let costo;
+
+    if (cita <= 3) {
+
+        costo = 100000;
+
+    } else if (cita <= 5) {
+
+        costo = 80000;
+
+    } else if (cita <= 8) {
+
+        costo = 70000;
+
+    } else {
+
+        costo = 50000;
+    }
+
+
+    let total = 0;
+
+
+    if (cita <= 3) {
+
+        total =
+            cita * 100000;
+
+    } else if (cita <= 5) {
+
+        total =
+            (3 * 100000) +
+            ((cita - 3) * 80000);
+
+    } else if (cita <= 8) {
+
+        total =
+            (3 * 100000) +
+            (2 * 80000) +
+            ((cita - 5) * 70000);
+
+    } else {
+
+        total =
+            (3 * 100000) +
+            (2 * 80000) +
+            (3 * 70000) +
+            ((cita - 8) * 50000);
+    }
+
+
+    document.getElementById("resultado17").innerHTML =
+        "💗 Costo de esta cita: $" +
+        costo.toLocaleString("es-CO") +
+
+        "<br>Total pagado: $" +
+        total.toLocaleString("es-CO");
+}
+
+</script>
+
+
+</body>
+</html>
