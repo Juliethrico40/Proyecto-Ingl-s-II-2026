@@ -1,20 +1,21 @@
-```css
 /* ============================================================
    WEB PROFILE TEMPLATE - STYLES
    UniEspinal · Técnico Profesional en Programación Web
-   Texto blanco y detalles rosados
+
+   You do not need to change this file to complete the assignment.
+   Change it only if you want a different look.
+   The colours are defined once, at the top. Change them there.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* ---------- VARIABLES DE COLOR ---------- */
 :root {
   --color-fondo:        #1e2326;
   --color-fondo-alt:    #252a2e;
   --color-fondo-oscuro: #131517;
   --color-acento:       #f38fce;
-  --color-texto:        #ffffff;
-  --color-texto-suave:  #ffffff;
+  --color-texto:       #ecf1f5,
+  --color-texto-suave:  #ecf1f5,
 
   --fuente-titulo: 'Righteous', cursive;
   --fuente-texto:  'Work Sans', sans-serif;
@@ -22,7 +23,6 @@
   --ancho-max: 1100px;
 }
 
-/* ---------- CONFIGURACIÓN GENERAL ---------- */
 * {
   box-sizing: border-box;
   font-family: var(--fuente-texto);
@@ -37,23 +37,14 @@ html {
 
 body {
   background-color: var(--color-fondo);
-  color: #ffffff;
+  color: var(--color-texto);
 }
 
-a {
-  color: inherit;
-}
+a { color: inherit; }
 
 :focus-visible {
   outline: 3px solid var(--color-acento);
   outline-offset: 3px;
-}
-
-/* ---------- TEXTO BLANCO ---------- */
-h1, h2, h3, h4, h5, h6,
-p, span, li, strong, label,
-small, em, b, td, th {
-  color: #ffffff;
 }
 
 /* ---------- HEADER ---------- */
@@ -88,7 +79,7 @@ small, em, b, td, th {
 }
 
 .contenedor-header header nav ul li a {
-  color: #ffffff;
+  color: var(--color-texto);
   margin: 0 14px;
   padding: 3px;
   font-size: 14px;
@@ -97,9 +88,7 @@ small, em, b, td, th {
   text-decoration: none;
 }
 
-.contenedor-header header nav ul li a:hover {
-  color: var(--color-acento);
-}
+.contenedor-header header nav ul li a:hover { color: var(--color-acento); }
 
 .acciones-header {
   display: flex;
@@ -107,12 +96,12 @@ small, em, b, td, th {
   gap: 12px;
 }
 
-/* ---------- SELECTOR DE IDIOMA ---------- */
+/* ---------- LANGUAGE SWITCHER ---------- */
 .btn-idioma {
   cursor: pointer;
   background: transparent;
   border: 1.5px solid var(--color-acento);
-  color: #ffffff;
+  color: var(--color-texto);
   border-radius: 20px;
   padding: 6px 14px;
   font-size: 13px;
@@ -121,26 +110,14 @@ small, em, b, td, th {
   transition: background-color .3s;
 }
 
-.btn-idioma:hover {
-  background-color: rgba(243, 143, 206, .15);
-}
-
-.btn-idioma .idioma-activo {
-  color: var(--color-acento);
-}
-
-.btn-idioma .idioma-inactivo {
-  color: #ffffff;
-}
-
-.btn-idioma .idioma-sep {
-  margin: 0 4px;
-  color: #ffffff;
-}
+.btn-idioma:hover { background-color: rgba(28, 182, 152, .15); }
+.btn-idioma .idioma-activo   { color: var(--color-acento); }
+.btn-idioma .idioma-inactivo { color: var(--color-texto-suave); }
+.btn-idioma .idioma-sep      { margin: 0 4px; color: var(--color-texto-suave); }
 
 .nav-responsive {
   background-color: var(--color-acento);
-  color: #ffffff;
+  color: var(--color-texto);
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
@@ -149,13 +126,9 @@ small, em, b, td, th {
   display: none;
 }
 
-/* ---------- PORTADA ---------- */
+/* ---------- HERO ---------- */
 .inicio {
-  background: linear-gradient(
-    to top,
-    rgba(30, 35, 38, .85),
-    rgba(30, 35, 38, 1)
-  );
+  background: linear-gradient(to top, rgba(30,35,38,.85), rgba(30,35,38,1));
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -185,22 +158,21 @@ small, em, b, td, th {
   font-size: 30px;
   font-family: var(--fuente-titulo);
   line-height: 1.2;
-  color: #ffffff;
 }
 
 .inicio .contenido-banner h2 {
   font-size: 15px;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--color-texto-suave);
   margin-top: 10px;
 }
 
 .inicio .redes a,
 footer .redes a {
-  color: #ffffff;
+  color: var(--color-texto);
   display: inline-block;
   text-decoration: none;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--color-texto);
   border-radius: 50%;
   width: 42px;
   height: 42px;
@@ -210,33 +182,22 @@ footer .redes a {
   transition: background-color .3s, border-color .3s;
 }
 
-.inicio .redes a:hover {
-  background-color: var(--color-acento);
-  border-color: var(--color-acento);
-}
+.inicio .redes a:hover { background-color: var(--color-acento); border-color: var(--color-acento); }
 
-/* ---------- SECCIONES GENERALES ---------- */
+/* ---------- SHARED SECTION LAYOUT ---------- */
 .sobremi,
 .skills,
 .curriculum,
 .portfolio,
-.contacto {
-  padding: 60px 20px;
-}
+.contacto { padding: 60px 20px; }
 
 .sobremi,
-.curriculum {
-  background-color: var(--color-fondo);
-}
+.curriculum { background-color: var(--color-fondo); }
 
 .skills,
-.portfolio {
-  background-color: var(--color-fondo-alt);
-}
+.portfolio { background-color: var(--color-fondo-alt); }
 
-.contacto {
-  background-color: var(--color-fondo-oscuro);
-}
+.contacto  { background-color: var(--color-fondo-oscuro); }
 
 .contenido-seccion {
   max-width: var(--ancho-max);
@@ -252,43 +213,28 @@ footer .redes a {
   font-family: var(--fuente-titulo);
   text-align: center;
   padding: 10px 0 30px;
-  color: #ffffff;
 }
 
-.fila {
-  display: flex;
-  gap: 30px;
-}
-
-.fila .col {
-  width: 50%;
-}
+.fila { display: flex; gap: 30px; }
+.fila .col { width: 50%; }
 
 .fila .col h3 {
   font-size: 24px;
   font-family: var(--fuente-titulo);
   margin-bottom: 22px;
-  color: #ffffff;
 }
 
-/* ---------- SOBRE MÍ ---------- */
+/* ---------- ABOUT ---------- */
 .sobremi > .contenido-seccion > p {
   font-size: 17px;
   line-height: 26px;
   margin-bottom: 35px;
-  color: #ffffff;
+  color: var(--color-texto-suave);
   max-width: 800px;
 }
 
-.datos {
-  list-style: none;
-}
-
-.datos li {
-  margin: 12px 0;
-  font-size: 15px;
-  color: #ffffff;
-}
+.datos { list-style: none; }
+.datos li { margin: 12px 0; font-size: 15px; }
 
 .datos li strong {
   display: inline-block;
@@ -298,17 +244,12 @@ footer .redes a {
 
 .datos li .destacado {
   background-color: var(--color-acento);
-  color: #ffffff;
   padding: 3px 8px;
   font-weight: 600;
   border-radius: 5px;
 }
 
-.contenedor-intereses {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
+.contenedor-intereses { display: flex; flex-wrap: wrap; gap: 15px; }
 
 .interes {
   width: 100px;
@@ -322,34 +263,21 @@ footer .redes a {
   text-align: center;
   font-size: 12px;
   transition: background-color .3s;
-  color: #ffffff;
 }
 
-.interes:hover {
-  background-color: var(--color-acento);
-}
+.interes:hover { background-color: var(--color-acento); }
+.interes i { font-size: 26px; margin-bottom: 8px; }
 
-.interes i {
-  font-size: 26px;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
+/* ---------- SKILLS ---------- */
+.skills .fila .col { padding: 0 10px; }
 
-/* ---------- HABILIDADES ---------- */
-.skills .fila .col {
-  padding: 0 10px;
-}
-
-.skill {
-  margin-bottom: 26px;
-}
+.skill { margin-bottom: 26px; }
 
 .skill .skill-nombre {
   font-weight: 600;
   display: block;
   margin-bottom: 10px;
   font-size: 15px;
-  color: #ffffff;
 }
 
 .barra-skill {
@@ -360,6 +288,7 @@ footer .redes a {
   border-radius: 4px;
 }
 
+/* The width is set by script.js from the data-percent attribute. */
 .progreso {
   background-color: var(--color-acento);
   position: absolute;
@@ -376,7 +305,6 @@ footer .redes a {
   height: 38px;
   width: 38px;
   background-color: var(--color-acento);
-  color: #ffffff;
   border-radius: 50%;
   line-height: 38px;
   text-align: center;
@@ -386,22 +314,12 @@ footer .redes a {
   font-weight: 600;
 }
 
-/* ---------- CURRÍCULUM ---------- */
-.curriculum .fila {
-  justify-content: space-between;
-}
+/* ---------- RESUME ---------- */
+.curriculum .fila { justify-content: space-between; }
+.curriculum .fila .col { width: 49%; }
 
-.curriculum .fila .col {
-  width: 49%;
-}
-
-.curriculum .fila .izquierda {
-  border-right: 2px solid var(--color-fondo-alt);
-}
-
-.curriculum .fila .derecha {
-  border-left: 2px solid var(--color-fondo-alt);
-}
+.curriculum .fila .izquierda { border-right: 2px solid var(--color-fondo-alt); }
+.curriculum .fila .derecha   { border-left:  2px solid var(--color-fondo-alt); }
 
 .curriculum .item {
   padding: 22px;
@@ -411,11 +329,7 @@ footer .redes a {
   border-radius: 6px;
 }
 
-.curriculum .item h4 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
+.curriculum .item h4 { font-size: 18px; margin-bottom: 8px; }
 
 .curriculum .item .casa {
   color: var(--color-acento);
@@ -431,21 +345,10 @@ footer .redes a {
   margin-bottom: 10px;
 }
 
-.curriculum .item p {
-  line-height: 23px;
-  color: #ffffff;
-  font-size: 15px;
-}
+.curriculum .item p { line-height: 23px; color: var(--color-texto-suave); font-size: 15px; }
 
-.curriculum .izq {
-  border-right: 2px solid var(--color-acento);
-  margin-right: 20px;
-}
-
-.curriculum .der {
-  border-left: 2px solid var(--color-acento);
-  margin-left: 20px;
-}
+.curriculum .izq { border-right: 2px solid var(--color-acento); margin-right: 20px; }
+.curriculum .der { border-left:  2px solid var(--color-acento); margin-left: 20px; }
 
 .curriculum .conectori,
 .curriculum .conectord {
@@ -456,16 +359,10 @@ footer .redes a {
   top: 50%;
 }
 
-.curriculum .conectori {
-  right: -42px;
-}
+.curriculum .conectori { right: -42px; }
+.curriculum .conectord { left: -42px; }
 
-.curriculum .conectord {
-  left: -42px;
-}
-
-.circuloi,
-.circulod {
+.circuloi, .circulod {
   display: block;
   height: 10px;
   width: 10px;
@@ -475,15 +372,10 @@ footer .redes a {
   bottom: 4px;
 }
 
-.circuloi {
-  float: right;
-}
+.circuloi { float: right; }
+.circulod { float: left; }
 
-.circulod {
-  float: left;
-}
-
-/* ---------- PROYECTOS ---------- */
+/* ---------- PORTFOLIO ---------- */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -500,16 +392,13 @@ footer .redes a {
   text-decoration: none;
 }
 
-.proyecto img {
-  width: 100%;
-  display: block;
-}
+.proyecto img { width: 100%; display: block; }
 
 .proyecto .overlay {
   position: absolute;
   inset: 0;
   text-align: center;
-  background: rgba(243, 143, 206, .90);
+  background: rgba(28, 182, 152, .88);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -521,24 +410,14 @@ footer .redes a {
 }
 
 .proyecto:hover .overlay,
-.proyecto:focus-visible .overlay {
-  opacity: 1;
-}
+.proyecto:focus-visible .overlay { opacity: 1; }
 
-.proyecto .overlay h3 {
-  margin-bottom: 10px;
-  font-size: 19px;
-  color: #ffffff;
-}
+.proyecto .overlay h3 { margin-bottom: 10px; font-size: 19px; }
 
-.proyecto .overlay p {
-  color: #ffffff;
-}
-
-/* ---------- CONTACTO ---------- */
+/* ---------- CONTACT ---------- */
 .contacto-intro {
   text-align: center;
-  color: #ffffff;
+  color: var(--color-texto-suave);
   max-width: 600px;
   margin: 0 auto 40px;
   line-height: 25px;
@@ -559,32 +438,12 @@ footer .redes a {
   transition: transform .3s, background-color .3s;
 }
 
-.tarjeta:hover {
-  transform: translateY(-5px);
-  background-color: #2c3237;
-}
+.tarjeta:hover { transform: translateY(-5px); background-color: #2c3237; }
+.tarjeta i { font-size: 28px; color: var(--color-acento); display: block; margin-bottom: 14px; }
+.tarjeta strong { display: block; margin-bottom: 6px; font-size: 16px; }
+.tarjeta span { font-size: 14px; color: var(--color-texto-suave); word-break: break-word; }
 
-.tarjeta i {
-  font-size: 28px;
-  color: var(--color-acento);
-  display: block;
-  margin-bottom: 14px;
-}
-
-.tarjeta strong {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 16px;
-  color: #ffffff;
-}
-
-.tarjeta span {
-  font-size: 14px;
-  color: #ffffff;
-  word-break: break-word;
-}
-
-/* ---------- PIE DE PÁGINA ---------- */
+/* ---------- FOOTER ---------- */
 footer {
   background-color: var(--color-fondo-alt);
   padding: 55px 20px 35px;
@@ -597,7 +456,7 @@ footer .arriba {
   width: 50px;
   height: 50px;
   background-color: var(--color-acento);
-  color: #ffffff;
+  color: var(--color-texto);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -608,24 +467,14 @@ footer .arriba {
   text-decoration: none;
 }
 
-.footer-nota {
-  color: #ffffff;
-  font-size: 14px;
-}
+.footer-nota { color: var(--color-texto-suave); font-size: 14px; }
 
-/* ---------- DISEÑO RESPONSIVE ---------- */
+/* ---------- RESPONSIVE ---------- */
 @media screen and (max-width: 980px) {
-  nav {
-    display: none;
-  }
+  nav { display: none; }
+  nav.responsive { display: block; }
 
-  nav.responsive {
-    display: block;
-  }
-
-  .nav-responsive {
-    display: block;
-  }
+  .nav-responsive { display: block; }
 
   nav.responsive {
     position: absolute;
@@ -635,76 +484,34 @@ footer .arriba {
     width: 200px;
   }
 
-  nav.responsive ul {
-    display: block !important;
-  }
+  nav.responsive ul { display: block !important; }
 
   nav.responsive ul li {
-    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    border-bottom: 1px solid rgba(255,255,255,.15);
     padding: 12px 0;
-  }
-
-  nav.responsive ul li a {
-    color: #ffffff;
   }
 }
 
 @media screen and (max-width: 760px) {
-  .fila {
-    display: block;
-  }
+  .fila { display: block; }
+  .fila .col { width: 100%; margin-bottom: 35px; }
 
-  .fila .col {
-    width: 100%;
-    margin-bottom: 35px;
-  }
+  .barra-skill { width: 100%; }
 
-  .barra-skill {
-    width: 100%;
-  }
-
-  .curriculum .fila .col {
-    width: 100%;
-  }
-
+  .curriculum .fila .col { width: 100%; }
   .curriculum .fila .izquierda,
-  .curriculum .fila .derecha {
-    border: none;
-  }
+  .curriculum .fila .derecha { border: none; }
+  .curriculum .izq, .curriculum .der { margin: 0; }
+  .curriculum .conectori, .curriculum .conectord { display: none; }
 
-  .curriculum .izq,
-  .curriculum .der {
-    margin: 0;
-  }
+  .sobremi h2, .skills h2, .curriculum h2,
+  .portfolio h2, .contacto h2 { font-size: 32px; }
 
-  .curriculum .conectori,
-  .curriculum .conectord {
-    display: none;
-  }
-
-  .sobremi h2,
-  .skills h2,
-  .curriculum h2,
-  .portfolio h2,
-  .contacto h2 {
-    font-size: 32px;
-  }
-
-  .proyecto .overlay {
-    opacity: 1;
-    background: rgba(243, 143, 206, .85);
-  }
+  .proyecto .overlay { opacity: 1; background: rgba(28,182,152,.75); }
 }
 
-/* ---------- ACCESIBILIDAD ---------- */
+/* ---------- ACCESSIBILITY ---------- */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  * {
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-  }
+  html { scroll-behavior: auto; }
+  * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
-```
